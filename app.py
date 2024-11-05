@@ -32,7 +32,7 @@ port=1883
 st.title("MQTT Control")
 
 if st.button('ON'):
-    act1="ON"
+    act1="close the door"
     client1= paho.Client("GIT-HUB")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
