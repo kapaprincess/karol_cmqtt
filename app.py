@@ -84,7 +84,7 @@ if st.button('Enviar valor analógico'):
 else:
     st.write('')
 
-
+st.link_button("Voice Interface", "https://finalmultimodal.streamlit.app/")
 
 st.title("Voice Interface")
 
