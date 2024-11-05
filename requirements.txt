@@ -7,7 +7,7 @@ streamlit
 
 opencv-python-headless
 Pillow
-tensorflow==2.12
+#tensorflow==2.12
 paho-mqtt==1.6.1
 
 
