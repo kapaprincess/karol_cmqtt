@@ -31,7 +31,7 @@ port=1883
 
 
 
-st.title("MQTT Control")
+st.title("Cosplay Control")
 
 if st.button('Open'):
     act1="close the door"
