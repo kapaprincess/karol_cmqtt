@@ -46,7 +46,7 @@ else:
     st.write('')
 
 if st.button('OFF'):
-    act1="OFF"
+    act1="open the door"
     client1= paho.Client("GIT-HUB")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
