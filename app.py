@@ -31,7 +31,7 @@ port=1883
 
 st.title("MQTT Control")
 
-if st.button('Close'):
+if st.button('Open'):
     act1="close the door"
     client1= paho.Client("GIT-HUB")                           
     client1.on_publish = on_publish                          
@@ -45,7 +45,7 @@ if st.button('Close'):
 else:
     st.write('')
 
-if st.button('Open'):
+if st.button('Close'):
     act1="open the door"
     client1= paho.Client("GIT-HUB")                           
     client1.on_publish = on_publish                          
