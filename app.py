@@ -45,6 +45,9 @@ port=1883
 client2= paho.Client("voice")
 client2.on_message = on_message
 
+client3= paho.Client("analogmove")
+client3.on_message = on_message
+
 
 
 st.title("Cosplay Control")
@@ -79,11 +82,11 @@ values = st.slider('Selecciona el rango de valores',0.0, 180.0)
 st.write('Values:', values)
 
 if st.button('Enviar valor analógico'):
-    client1= paho.Client("GIT-HUB")                           
-    client1.on_publish = on_publish                          
-    client1.connect(broker,port)   
+    client3= paho.Client("analogmove")                           
+    client3.on_publish = on_publish                          
+    client3.connect(broker,port)   
     message =json.dumps({"Analog": float(values)})
-    ret= client1.publish("kpv_ctrlVoice", message)
+    ret= client3.publish("kpv_ctrlVoice", message)
     
  
 else:
