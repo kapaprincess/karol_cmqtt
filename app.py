@@ -55,7 +55,7 @@ if st.button('Open'):
     client2.on_publish = on_publish                          
     client2.connect(broker,port)  
     message =json.dumps({"Act1":act1})
-    ret= client1.publish("kpv_ctrl", message)
+    ret= client2.publish("kpv_ctrl", message)
  
     #client1.subscribe("Sensores")
     
