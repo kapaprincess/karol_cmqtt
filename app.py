@@ -56,7 +56,7 @@ st.title("Cosplay Control")
 
 if st.button('Open'):
     act1="close"
-    client2= paho.Client("voice")                           
+    client2= paho.Client("GIT-HUB")                           
     client2.on_publish = on_publish                          
     client2.connect(broker,port)  
     message =json.dumps({"Act1":act1})
@@ -79,11 +79,15 @@ if st.button('Close'):
     
 else:
     st.write('')
+#Valor análogo
+
+
+
 
 values = st.slider('Selecciona el rango de valores',0.0, 180.0)
 st.write('Values:', values)
 
-if st.button('Enviar valor analógico'):
+if st.button('Send Analog Value'):
     client3= paho.Client("analogmove")                           
     client3.on_publish = on_publish                          
     client3.connect(broker,port)   
@@ -162,4 +166,5 @@ if result:
         client1.connect(broker,port)  
         message =json.dumps({"Act3":result.get("GET_TEXT").strip()})
         ret= client1.publish("kpv_ctrlVoice", message)
+        act3="OFF"
 
