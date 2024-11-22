@@ -116,7 +116,7 @@ st.title("Voice Control")
 # st.subheader("CONTROL WITH VOICE")
 
 
-st.write("Press the button and speak to control the lights (purple and green) and the door.")
+st.write("Press the button and speak to open or close.")
 
 stt_button = Button(label=" Speak ", width=200)
 
