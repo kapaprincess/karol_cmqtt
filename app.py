@@ -104,7 +104,7 @@ def on_message(client, userdata, message):
 
 broker="157.230.214.127"
 port=1883
-client1= paho.Client("KarolVoz2")
+client1= paho.Client("GIT-HUB")
 client1.on_message = on_message
 
 
@@ -161,11 +161,11 @@ st.text("Purple Light")
 
 if st.button('PURPLE ON'):
     act2="turn the yellow light on"
-    client1= paho.Client("clientekp")                           
+    client1= paho.Client("GIT-HUB")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act2":act2})
-    ret= client1.publish("kpvp_ctrl", message)
+    ret= client1.publish("kpv_ctrl", message)
  
     #client1.subscribe("Sensores")
     
@@ -175,11 +175,11 @@ else:
 
 if st.button('PURPLE OFF'):
     act2="turn the yellow light off"
-    client1= paho.Client("clientekp")                           
+    client1= paho.Client("GIT-HUB")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act2":act2})
-    ret= client1.publish("kpvp_ctrl", message)
+    ret= client1.publish("kpv_ctrl", message)
   
     
 else:
@@ -189,11 +189,11 @@ st.text("Green Light")
 
 if st.button('GREEN ON'):
     act2="turn the blue light on"
-    client1= paho.Client("clientek2p")                           
+    client1= paho.Client("GIT-HUB")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act2":act2})
-    ret= client1.publish("kpvg_ctrl", message)
+    ret= client1.publish("kpv_ctrl", message)
  
     #client1.subscribe("Sensores")
     
@@ -203,11 +203,11 @@ else:
 
 if st.button('GREEN OFF'):
     act2="turn the blue light off"
-    client1= paho.Client("clientek2p")                           
+    client1= paho.Client("GIT-HUB")                           
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act2":act2})
-    ret= client1.publish("kpvg_ctrl", message)
+    ret= client1.publish("kpv_ctrl", message)
   
     
 else:
