@@ -42,8 +42,8 @@ def on_message(client, userdata, message):
 
 broker="broker.mqttdashboard.com"
 port=1883
-#client1= paho.Client("GIT-HUB")
-#client1.on_message = on_message
+client2= paho.Client("voice")
+client2.on_message = on_message
 
 
 
@@ -51,9 +51,9 @@ st.title("Cosplay Control")
 
 if st.button('Open'):
     act1="close the door"
-    client1= paho.Client("GIT-HUB")                           
-    client1.on_publish = on_publish                          
-    client1.connect(broker,port)  
+    client2= paho.Client("voice")                           
+    client2.on_publish = on_publish                          
+    client2.connect(broker,port)  
     message =json.dumps({"Act1":act1})
     ret= client1.publish("kpv_ctrl", message)
  
@@ -65,11 +65,11 @@ else:
 
 if st.button('Close'):
     act1="open the door"
-    client1= paho.Client("GIT-HUB")                           
-    client1.on_publish = on_publish                          
-    client1.connect(broker,port)  
+    client2= paho.Client("GIT-HUB")                           
+    client2.on_publish = on_publish                          
+    client2.connect(broker,port)  
     message =json.dumps({"Act1":act1})
-    ret= client1.publish("kpv_ctrl", message)
+    ret= client2.publish("kpv_ctrl", message)
   
     
 else:
