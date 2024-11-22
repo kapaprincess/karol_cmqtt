@@ -159,6 +159,6 @@ if result:
         st.write(result.get("GET_TEXT"))
         client1.on_publish = on_publish                            
         client1.connect(broker,port)  
-        message =json.dumps({"Act2":result.get("GET_TEXT").strip()})
+        message =json.dumps({"Act3":result.get("GET_TEXT").strip()})
         ret= client1.publish("kpv_ctrlVoice", message)
 
