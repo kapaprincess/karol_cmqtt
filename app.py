@@ -83,7 +83,7 @@ if st.button('Enviar valor analógico'):
     client1.on_publish = on_publish                          
     client1.connect(broker,port)   
     message =json.dumps({"Analog": float(values)})
-    ret= client1.publish("kpv_ctrl", message)
+    ret= client1.publish("kpv_ctrlVoice", message)
     
  
 else:
