@@ -155,7 +155,7 @@ if result:
         message =json.dumps({"Act1":result.get("GET_TEXT").strip()})
         ret= client1.publish("kpv_ctrl", message)
 
-"""
+
 st.subheader("CONTROL WITH BUTTONS")
 
 st.text("Purple Light")
@@ -214,4 +214,4 @@ if st.button('GREEN OFF'):
 else:
     st.write('')
     
-"""
+
