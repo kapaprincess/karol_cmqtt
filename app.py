@@ -19,7 +19,7 @@ import glob
 from gtts import gTTS
 from googletrans import Translator
 
-pip install --upgrade numpy bokeh streamlit
+upgrade numpy bokeh streamlit
 
 
 # Muestra la versión de Python junto con detalles adicionales
