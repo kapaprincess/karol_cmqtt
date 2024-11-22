@@ -89,7 +89,7 @@ if st.button('Enviar valor analógico'):
 else:
     st.write('')
 
-# st.link_button("Voice Interface", "https://cosplayvoice.streamlit.app/voice2")
+st.link_button("Voice Interface", "https://cosplayvoice.streamlit.app/voice2")
 
 # Control por voz
 
