@@ -110,9 +110,9 @@ client1.on_message = on_message
 
 
 st.title("ROOM 1")
-image = Image.open('room1.jpg')
-st.image(image)
-st.subheader("CONTROL WITH VOICE")
+# image = Image.open('room1.jpg')
+# st.image(image)
+# st.subheader("CONTROL WITH VOICE")
 
 
 st.write("Press the button and speak to control the lights (purple and green) and the door.")
