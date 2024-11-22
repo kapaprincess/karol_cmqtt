@@ -20,7 +20,7 @@ gTTS==2.2.2
 googletrans==3.1.0a0
 Jinja2 >=2.9
 #contourpy >=1
-#numpy >=1.16
+numpy >=1.16
 packaging >=16.8
 #pandas >=1.2
 pillow >=7.1.0
