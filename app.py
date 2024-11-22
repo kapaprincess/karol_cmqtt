@@ -93,6 +93,7 @@ if st.button('Send Analog Value'):
     client3.connect(broker,port)   
     message =json.dumps({"Analog": float(values)})
     ret= client3.publish("kpv_ctrlAnalog", message)
+    act3="OFF"
     
  
 else:
