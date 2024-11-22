@@ -92,7 +92,7 @@ if st.button('Enviar valor analógico'):
 else:
     st.write('')
 
-st.link_button("Voice Interface", "https://cosplayvoice.streamlit.app/voice2")
+# st.link_button("Voice Interface", "https://cosplayvoice.streamlit.app/voice2")
 
 # Control por voz
 
@@ -158,6 +158,6 @@ if result:
         st.write(result.get("GET_TEXT"))
         client1.on_publish = on_publish                            
         client1.connect(broker,port)  
-        message =json.dumps({"Act2":result.get("GET_TEXT").strip()})
+        message =json.dumps({"Act3":result.get("GET_TEXT").strip()})
         ret= client1.publish("kpv_ctrlVoice", message)
 
