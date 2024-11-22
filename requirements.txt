@@ -5,11 +5,11 @@
 #arriba los cambios para probar
 paho-mqtt== 1.6.1
 
-keras
+#keras
 streamlit
 
 
-opencv-python-headless
+#opencv-python-headless
 Pillow
 #tensorflow==2.12
 paho-mqtt==1.6.1
@@ -19,13 +19,13 @@ paho-mqtt==1.6.1
 gTTS==2.2.2
 googletrans==3.1.0a0
 Jinja2 >=2.9
-contourpy >=1
+#contourpy >=1
 numpy >=1.16
 packaging >=16.8
-pandas >=1.2
+#pandas >=1.2
 pillow >=7.1.0
-PyYAML >=3.10
+#PyYAML >=3.10
 tornado >=5.1
-xyzservices >=2021.09.1
+#xyzservices >=2021.09.1
 bokeh==2.4.3
 Streamlit-bokeh-events
