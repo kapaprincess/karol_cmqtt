@@ -27,6 +27,7 @@ st.write("Versión de Python:", platform.python_version())
 
 values = 0.0
 act1="OFF"
+act2="OFF"
 
 def on_publish(client,userdata,result):             #create function for callback
     print("el dato ha sido publicado \n")
