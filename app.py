@@ -87,7 +87,7 @@ if st.button('Enviar valor analógico'):
     client3= paho.Client("analogmove")                           
     client3.on_publish = on_publish                          
     client3.connect(broker,port)   
-    message =json.dumps({"Act3": float(values)})
+    message =json.dumps({"Analog": float(values)})
     ret= client3.publish("kpv_ctrlAnalog", message)
     
  
