@@ -120,7 +120,7 @@ st.write("Press the button and speak to open or close.")
 
 stt_button = Button(label=" Speak ", width=200)
 
-stt_button.js_on_event("button_click", CustomJS(code=
+stt_button.js_on_event("button_click", CustomJS(code= """
     var recognition = new webkitSpeechRecognition();
     recognition.continuous = true;
     recognition.interimResults = true;
@@ -137,7 +137,7 @@ stt_button.js_on_event("button_click", CustomJS(code=
         }
     }
     recognition.start();
-    ))
+   """))
 
 result = streamlit_bokeh_events(
     stt_button,
