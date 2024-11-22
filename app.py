@@ -19,7 +19,6 @@ import glob
 from gtts import gTTS
 from googletrans import Translator
 
-
 # Muestra la versión de Python junto con detalles adicionales
 st.write("Versión de Python:", platform.python_version())
 
@@ -91,18 +90,7 @@ st.link_button("Voice Interface", "https://finalmultimodal.streamlit.app/")
 
 # Control por voz
 
-import os
-import streamlit as st
-from bokeh.models.widgets import Button
-from bokeh.models import CustomJS
-from streamlit_bokeh_events import streamlit_bokeh_events
-from PIL import Image
-import time
-import glob
-import paho.mqtt.client as paho
-import json
-from gtts import gTTS
-from googletrans import Translator
+
 
 def on_publish(client,userdata,result):             #create function for callback
     print("el dato ha sido publicado \n")
