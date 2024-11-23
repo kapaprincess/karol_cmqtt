@@ -76,6 +76,6 @@ if result:
         st.write(result.get("GET_TEXT"))
         client5.on_publish = on_publish                            
         client5.connect(broker,port)  
-        message =json.dumps({"Act4":result.get("GET_TEXT").strip()})
+        message =json.dumps({"Analog2":result.get("GET_TEXT").strip()})
         ret= client5.publish("kpv_ctrlVoice", message)
-        act3="OFF"
+       
