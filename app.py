@@ -10,6 +10,7 @@ import platform
 import os
 
 from bokeh.models.widgets import Button
+import streamlit.components.v1 as components
 from bokeh.models import CustomJS
 from streamlit_bokeh_events import streamlit_bokeh_events
 from PIL import Image
@@ -19,6 +20,7 @@ import glob
 
 from gtts import gTTS
 from googletrans import Translator
+
 
 #Estética
 st.markdown(
@@ -50,6 +52,21 @@ st.markdown(
     .css-1d391kg {
         background-color: #003333;
         color: #00FF88;
+    }
+
+    .bk-button {
+        background-color: #003333 !important; /* Fondo oscuro */
+        color: #00FF88 !important;           /* Texto en verde neón */
+        border: 2px solid #00FF88 !important; /* Borde verde */
+        border-radius: 8px !important;       /* Bordes redondeados */
+        font-family: monospace !important;   /* Fuente futurista */
+        font-size: 16px !important;          /* Tamaño de fuente */
+        padding: 10px 20px !important;       /* Espaciado interno */
+        cursor: pointer !important;          /* Cursor interactivo */
+    }
+    .bk-button:hover {
+        background-color: #005555 !important; /* Fondo más claro al pasar el cursor */
+        color: #FFFFFF !important;            /* Texto blanco */
     }
     </style>
     """,
@@ -167,6 +184,7 @@ st.title("Voice Control")
 st.write("Press the button and speak to open or close.")
 
 stt_button = Button(label=" Speak ", width=200)
+components.html(stt_button)
 
 stt_button.js_on_event("button_click", CustomJS(code= """
     var recognition = new webkitSpeechRecognition();
