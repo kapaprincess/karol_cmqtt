@@ -4,8 +4,9 @@ import streamlit as st
 import json
 import platform
 
-#Botón
-import streamlit.components.v1 as components
+#Extra Botón
+from bokeh.layouts import column
+from bokeh.io import output_notebook, show
 
 #voz
 
@@ -22,6 +23,7 @@ import glob
 from gtts import gTTS
 from googletrans import Translator
 
+output_notebook()
 
 #Estética
 st.markdown(
@@ -185,7 +187,7 @@ st.title("Voice Control")
 st.write("Press the button and speak to open or close.")
 
 stt_button = Button(label=" Speak ", width=200)
-components.html(stt_button)
+st.bokeh_chart(column(stt_button))
 
 stt_button.js_on_event("button_click", CustomJS(code= """
     var recognition = new webkitSpeechRecognition();
