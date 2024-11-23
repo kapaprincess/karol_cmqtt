@@ -94,7 +94,7 @@ client3.on_message = on_message
 
 st.title("Cosplay Control")
 
-st.subheader("Servo #1)
+st.subheader("Servo #1")
 
 if st.button('Open'):
     act1="close"
