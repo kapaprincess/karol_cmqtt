@@ -21,6 +21,20 @@ import glob
 from gtts import gTTS
 from googletrans import Translator
 
+def on_publish(client,userdata,result):             #create function for callback
+    print("el dato ha sido publicado \n")
+    pass
+
+def on_message(client, userdata, message):
+    global message_received
+    time.sleep(2)
+    message_received=str(message.payload.decode("utf-8"))
+    st.write(message_received)
+
+        
+
+broker="broker.mqttdashboard.com"
+port=1883
 
 st.title("Voice Control Sevo #2")
 st.write("Press the button and speak to open or close.")
