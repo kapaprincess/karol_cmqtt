@@ -4,9 +4,7 @@ import streamlit as st
 import json
 import platform
 
-#Extra Botón
-from bokeh.layouts import column
-from bokeh.io import output_notebook
+
 
 #voz
 
@@ -23,7 +21,7 @@ import glob
 from gtts import gTTS
 from googletrans import Translator
 
-output_notebook()
+
 
 #Estética
 st.markdown(
@@ -57,21 +55,7 @@ st.markdown(
         color: #00FF88;
     }
 
-   /* Clase personalizada del botón de Bokeh */
-    .custom-bk-btn {
-        background-color: #003333 !important; /* Fondo oscuro */
-        color: #00FF88 !important;           /* Texto en verde neón */
-        border: 2px solid #00FF88 !important; /* Borde verde */
-        border-radius: 8px !important;       /* Bordes redondeados */
-        font-family: monospace !important;   /* Fuente futurista */
-        font-size: 16px !important;          /* Tamaño de fuente */
-        padding: 10px 20px !important;       /* Espaciado interno */
-        cursor: pointer !important;          /* Cursor interactivo */
-    }
-    .custom-bk-btn:hover {
-        background-color: #005555 !important; /* Fondo más claro al pasar el cursor */
-        color: #FFFFFF !important;            /* Texto blanco */
-    }
+   
     </style>
     """,
     unsafe_allow_html=True
@@ -188,11 +172,6 @@ st.title("Voice Control")
 st.write("Press the button and speak to open or close.")
 
 stt_button = Button(label=" Speak ", width=200)
-stt_button.js_on_event("button_click", CustomJS(code="""
-    console.log('Button clicked!');
-"""))
-stt_button.css_classes = ["custom-bk-btn"]
-st.bokeh_chart(column(stt_button))
 
 stt_button.js_on_event("button_click", CustomJS(code= """
     var recognition = new webkitSpeechRecognition();
