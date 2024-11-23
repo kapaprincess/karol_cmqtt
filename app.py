@@ -121,6 +121,8 @@ if st.button('Close'):
     
 else:
     st.write('')
+
+st.link_button("Voice control for servo #1", "https://cosplayvoice.streamlit.app/voice2")
 #Valor análogo
 
 
@@ -135,13 +137,13 @@ if st.button('Send Analog Value'):
     client3.connect(broker,port)   
     message =json.dumps({"Analog": float(values)})
     ret= client3.publish("kpv_ctrlAnalog", message)
-    act3="OFF"
+    
     
  
 else:
     st.write('')
 
-# st.link_button("Voice Interface", "https://cosplayvoice.streamlit.app/voice2")
+st.link_button("Voice control for servo #2", "https://cosplayvoice.streamlit.app/voice3")
 
 # Control por voz
 
