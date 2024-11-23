@@ -36,6 +36,9 @@ def on_message(client, userdata, message):
 broker="broker.mqttdashboard.com"
 port=1883
 
+client4= paho.Client("voice1")
+client4.on_message = on_message
+
 st.title("Voice Control Sevo #2")
 st.write("Press the button and speak to open or close.")
 
@@ -71,8 +74,8 @@ result = streamlit_bokeh_events(
 if result:
     if "GET_TEXT" in result:
         st.write(result.get("GET_TEXT"))
-        client1.on_publish = on_publish                            
-        client1.connect(broker,port)  
+        client4.on_publish = on_publish                            
+        client4.connect(broker,port)  
         message =json.dumps({"Act3":result.get("GET_TEXT").strip()})
         ret= client1.publish("kpv_ctrlVoice", message)
         act3="OFF"
