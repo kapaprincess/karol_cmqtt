@@ -126,7 +126,7 @@ else:
 
 st.subheader("Servo #2")
 
-values = st.slider('Selecciona el rango de valores',0.0, 180.0)
+values = st.slider('Select value from range',0.0, 180.0)
 st.write('Values:', values)
 
 if st.button('Send Analog Value'):
