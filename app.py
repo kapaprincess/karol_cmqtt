@@ -124,7 +124,7 @@ else:
 #Valor análogo
 
 
-
+st.subheader("Servo #2")
 
 values = st.slider('Selecciona el rango de valores',0.0, 180.0)
 st.write('Values:', values)
