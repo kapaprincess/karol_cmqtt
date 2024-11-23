@@ -78,4 +78,7 @@ if result:
         client5.connect(broker,port)  
         message =json.dumps({"Act4":result.get("GET_TEXT").strip()})
         ret= client5.publish("kpv_ctrlVoice", message)
+
+st.link_button("Main Page", "https://cosplayvoice.streamlit.app/")
+st.link_button("Voice control for servo #2", "https://cosplayvoice.streamlit.app/voice3")
        
