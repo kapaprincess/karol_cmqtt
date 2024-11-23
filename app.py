@@ -187,7 +187,7 @@ st.title("Voice Control")
 
 st.write("Press the button and speak to open or close.")
 
-# stt_button = Button(label=" Speak ", width=200)
+stt_button = Button(label=" Speak ", width=200)
 stt_button.js_on_event("button_click", CustomJS(code="""
     console.log('Button clicked!');
 """))
