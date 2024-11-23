@@ -80,3 +80,5 @@ if result:
         ret= client4.publish("kpv_ctrlVoice", message)
         act3="OFF"
 
+st.link_button("Main Page", "https://cosplayvoice.streamlit.app/")
+st.link_button("Voice control for servo #1", "https://cosplayvoice.streamlit.app/voice2")
