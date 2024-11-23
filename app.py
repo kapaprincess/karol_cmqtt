@@ -6,7 +6,6 @@ import platform
 
 #Extra Botón
 from bokeh.layouts import column
-from bokeh.io import output_notebook, show
 
 #voz
 
@@ -23,7 +22,6 @@ import glob
 from gtts import gTTS
 from googletrans import Translator
 
-output_notebook()
 
 #Estética
 st.markdown(
