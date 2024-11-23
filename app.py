@@ -94,6 +94,8 @@ client3.on_message = on_message
 
 st.title("Cosplay Control")
 
+st.subheader("Servo #1)
+
 if st.button('Open'):
     act1="close"
     client2= paho.Client("GIT-HUB")                           
