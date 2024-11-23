@@ -57,19 +57,20 @@ st.markdown(
         color: #00FF88;
     }
 
-   .bk-btn {
-        background-color: #003333 !important;
-        color: #00FF88 !important;
-        border: 2px solid #00FF88 !important;
-        border-radius: 8px !important;
-        font-family: monospace !important;
-        font-size: 16px !important;
-        padding: 10px 20px !important;
-        cursor: pointer !important;
+   /* Clase personalizada del botón de Bokeh */
+    .custom-bk-btn {
+        background-color: #003333 !important; /* Fondo oscuro */
+        color: #00FF88 !important;           /* Texto en verde neón */
+        border: 2px solid #00FF88 !important; /* Borde verde */
+        border-radius: 8px !important;       /* Bordes redondeados */
+        font-family: monospace !important;   /* Fuente futurista */
+        font-size: 16px !important;          /* Tamaño de fuente */
+        padding: 10px 20px !important;       /* Espaciado interno */
+        cursor: pointer !important;          /* Cursor interactivo */
     }
-    .bk-btn:hover {
-        background-color: #005555 !important;
-        color: #FFFFFF !important;
+    .custom-bk-btn:hover {
+        background-color: #005555 !important; /* Fondo más claro al pasar el cursor */
+        color: #FFFFFF !important;            /* Texto blanco */
     }
     </style>
     """,
@@ -187,6 +188,10 @@ st.title("Voice Control")
 st.write("Press the button and speak to open or close.")
 
 stt_button = Button(label=" Speak ", width=200)
+stt_button.js_on_event("button_click", CustomJS(code="""
+    console.log('Button clicked!');
+"""))
+stt_button.css_classes = ["custom-bk-btn"]
 st.bokeh_chart(column(stt_button))
 
 stt_button.js_on_event("button_click", CustomJS(code= """
