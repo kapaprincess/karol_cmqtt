@@ -20,6 +20,41 @@ import glob
 from gtts import gTTS
 from googletrans import Translator
 
+#Estética
+st.markdown(
+    """
+    <style>
+    /* Fondo general */
+    .main {
+        background-color: #001B1B;
+    }
+    /* Texto y encabezados */
+    h1, h2, h3, h4, h5, h6, p, label {
+        color: #00FF88;
+    }
+    /* Botones */
+    .stButton button {
+        background-color: #003333;
+        color: #00FF88;
+        border: 1px solid #00FF88;
+        border-radius: 5px;
+    }
+    .stButton button:hover {
+        background-color: #005555;
+    }
+    /* Barras de progreso */
+    .stProgress > div > div {
+        background-color: #00FF88;
+    }
+    /* Menú lateral */
+    .css-1d391kg {
+        background-color: #003333;
+        color: #00FF88;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 # Muestra la versión de Python junto con detalles adicionales
