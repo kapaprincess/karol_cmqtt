@@ -23,6 +23,7 @@ from googletrans import Translator
 
 
 st.title("Voice Control Sevo #2")
+st.write("Press the button and speak to open or close.")
 
 stt_button = Button(label=" Speak ", width=200)
 
