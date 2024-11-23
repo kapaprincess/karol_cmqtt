@@ -77,6 +77,6 @@ if result:
         client4.on_publish = on_publish                            
         client4.connect(broker,port)  
         message =json.dumps({"Act3":result.get("GET_TEXT").strip()})
-        ret= client1.publish("kpv_ctrlVoice", message)
+        ret= client4.publish("kpv_ctrlVoice", message)
         act3="OFF"
 
