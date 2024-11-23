@@ -1,4 +1,26 @@
+import paho.mqtt.client as paho
+import time
 import streamlit as st
+import json
+import platform
+
+
+
+#voz
+
+import os
+
+from bokeh.models.widgets import Button
+from bokeh.models import CustomJS
+from streamlit_bokeh_events import streamlit_bokeh_events
+from PIL import Image
+
+import glob
+
+
+from gtts import gTTS
+from googletrans import Translator
+
 
 st.title("Voice Control Sevo #2")
 
