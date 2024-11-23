@@ -1,1 +1,6 @@
-
+[theme]
+primaryColor = "#00FF88"  # Verde neón para elementos principales
+backgroundColor = "#001B1B"  # Fondo oscuro (casi negro con tinte verde)
+secondaryBackgroundColor = "#003333"  # Fondo para widgets (ligeramente más claro)
+textColor = "#00FF88"  # Texto en verde claro
+font = "monospace"  # Fuente futurista
